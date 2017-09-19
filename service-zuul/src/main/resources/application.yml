@@ -4,28 +4,28 @@
 
 # project相关
 project:
-    artifactId: elven-cloud-service-feign
+    artifactId: elven-cloud-service-zuul
     name: eureka
-    description: service-feign.cloud.elven.tech
+    description: service-zuul.cloud.elven.tech
 
 # 应用相关
 app:
-    name: elven-cloud-service-feign
-    description: ${app.name} is a Spring Cloud Service Feign application
+    name: elven-cloud-service-zuul
+    description: ${app.name} is a Spring Cloud Service Zuul application
 
 application:
-    message: Hello, elven
+    message: Hello, Zuul
 
 # 应用信息
 info:
     contact.email: elven1984@gmail.com
     contact.phone: 18888888888
     app.name: ${app.name}
-    app.description: ${app.name} is a Spring Cloud Service Feign application
+    app.description: ${app.name} is a Spring Cloud Service Zuul application
 
 # 服务器设置（端口等）
 server:
-    port: 6001 # 0:随机端口, -1表示禁止HTTP端口
+    port: 5001 # 0:随机端口, -1表示禁止HTTP端口
     undertow:
         accesslog:
             enabled: true
@@ -35,7 +35,7 @@ logging:
     level:
         root: INFO #FATAL ERROR WARN INFO DEBUG TRACE
     path: ./    # ./表示当前应用的根目录
-    file: ./logs/elven-cloud-service-feign.log    # 设置日志文件
+    file: ./logs/elven-cloud-service-zuul.log    # 设置日志文件
 
 # banner-mode
 spring:
@@ -51,14 +51,16 @@ eureka:
   client:
       serviceUrl:
           defaultZone: http://localhost:9999/eureka/
-#      healthcheck:
-#          enabled: true # 开启健康检查
   instance:
       lease-expiration-duration-in-seconds: 30  # 续约更新时间间隔（默认30秒）
       lease-renewal-interval-in-seconds: 10  # 续约到期时间（默认90秒）
 
-# feign
-feign:
-    hystrix:
-        #开启断路器
-        enabled: true
+# zuul
+zuul:
+  routes:
+    api-a:
+      path: /ribbon/**
+      serviceId: elven-cloud-service-ribbon
+    api-b:
+      path: /feign/**
+      serviceId: elven-cloud-service-feign

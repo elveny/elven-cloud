@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * <li>Version: 1.0</li>
  * <li>Content: create</li>
  */
-@FeignClient(value = "elven-cloud-service-provider")
+@FeignClient(value = "elven-cloud-service-provider", fallback = HelloServiceHystricImpl.class)
 public interface HelloService {
     @RequestMapping(value = "/rest/hello/hello",method = RequestMethod.GET)
     String hello();
