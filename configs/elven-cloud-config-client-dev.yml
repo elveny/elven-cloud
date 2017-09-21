@@ -14,7 +14,7 @@ app:
     description: ${app.name} is a Spring Cloud config-client application
 
 application:
-    message: Hello, elven, i am in elven-cloud-config-client-dev.yml
+    message: Hello, elven, i am in elven-cloud-config-client-dev.yml. I'm updated.
 
 # 应用信息
 info:
