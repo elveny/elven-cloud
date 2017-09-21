@@ -4,8 +4,10 @@
 
 # spring
 spring:
+    main:
+        banner-mode: "off"
     application:
-        name: config-client
+        name: elven-cloud-config-client
     cloud:
         config:
             label: master
