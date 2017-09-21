@@ -53,6 +53,10 @@ spring:
         virtualHost: /
         username: guest
         password: guest
+    cloud:
+        bus:
+            trace:
+                enabled: true
 
 # eureka client
 eureka:
@@ -62,3 +66,8 @@ eureka:
   instance:
       lease-expiration-duration-in-seconds: 30  # 续约更新时间间隔（默认30秒）
       lease-renewal-interval-in-seconds: 10  # 续约到期时间（默认90秒）
+
+# 关闭安全验证
+management:
+    security:
+        enabled: false
