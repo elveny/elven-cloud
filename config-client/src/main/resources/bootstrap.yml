@@ -6,6 +6,8 @@
 spring:
     main:
         banner-mode: "off"
+    profiles:
+        active: dev
     application:
         name: elven-cloud-config-client
     cloud:
