@@ -46,6 +46,13 @@ spring:
         active: home
     application:
         name: ${app.name}
+    # rabbitmq配置
+    rabbitmq:
+        host: 127.0.0.1
+        port: 5672
+        virtualHost: /
+        username: guest
+        password: guest
 
 # eureka client
 eureka:
