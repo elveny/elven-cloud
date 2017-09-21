@@ -53,6 +53,17 @@ spring:
                 git:
                     uri: https://github.com/elveny/elven-cloud
                     searchPaths: configs
+        bus:
+            trace:
+                enabled: true
+    # rabbitmq配置
+    rabbitmq:
+        host: 127.0.0.1
+        port: 5672
+        virtualHost: /
+        username: guest
+        password: guest
+
 
 # eureka client
 eureka:
@@ -62,3 +73,8 @@ eureka:
   instance:
       lease-expiration-duration-in-seconds: 30  # 续约更新时间间隔（默认30秒）
       lease-renewal-interval-in-seconds: 10  # 续约到期时间（默认90秒）
+
+# 关闭安全验证
+management:
+    security:
+        enabled: false
