@@ -14,5 +14,17 @@ spring:
         config:
             label: master
             profile: dev
-            uri: http://localhost:9000/
+#            uri: http://localhost:9000/
             name: elven-cloud-config-client
+            discovery:
+                enabled: true
+                serviceId: elven-cloud-config-server
+
+# eureka client
+eureka:
+  client:
+      serviceUrl:
+          defaultZone: http://localhost:9999/eureka/
+  instance:
+      lease-expiration-duration-in-seconds: 30  # 续约更新时间间隔（默认30秒）
+      lease-renewal-interval-in-seconds: 10  # 续约到期时间（默认90秒）
