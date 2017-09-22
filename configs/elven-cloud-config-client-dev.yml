@@ -48,11 +48,11 @@ spring:
         name: ${app.name}
     # rabbitmq配置
     rabbitmq:
-        host: 127.0.0.1
+        host: 10.16.31.78
         port: 5672
         virtualHost: /
-        username: guest
-        password: guest
+        username: dev
+        password: dev
     cloud:
         bus:
             trace:
