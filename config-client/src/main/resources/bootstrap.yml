@@ -7,13 +7,13 @@ spring:
     main:
         banner-mode: "off"
     profiles:
-        active: home
+        active: dev
     application:
         name: elven-cloud-config-client
     cloud:
         config:
             label: master
-            profile: dev
+            profile: home
 #            uri: http://localhost:9000/
             name: elven-cloud-config-client
             discovery:
