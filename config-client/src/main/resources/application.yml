@@ -1,0 +1,73 @@
+# application.yml
+# YML文件格式是YAML (YAML Aint Markup Language)编写的文件格式,YAML是一种直观的能够被电脑识别的的数据数据序列化格式,他并且容易被人类阅读.
+# 注意：yml的缩进，使用空格符，而不要使用tab键
+
+# project相关
+project:
+    artifactId: elven-cloud-config-client
+    name: config-client
+    description: config-client.cloud.elven.tech
+
+# 应用相关
+app:
+    name: elven-cloud-config-client
+    description: ${app.name} is a Spring Cloud config-client application
+
+application:
+    message: Hello, elven, i am in native application.yml.
+
+# 应用信息
+info:
+    contact.email: elven1984@gmail.com
+    contact.phone: 18888888888
+    app.name: ${app.name}
+    app.description: ${app.name} is a Spring Cloud config-client application
+
+# 服务器设置（端口等）
+server:
+    port: 9100 # 0:随机端口, -1表示禁止HTTP端口
+    undertow:
+        accesslog:
+            enabled: true
+
+# 日志
+logging:
+    level:
+        root: INFO #FATAL ERROR WARN INFO DEBUG TRACE
+    path: ./    # ./表示当前应用的根目录
+    file: ./logs/elven-cloud-config-client.log    # 设置日志文件
+
+
+# banner-mode
+spring:
+    main:
+        banner-mode: "off"
+    profiles:
+        active: home
+    application:
+        name: ${app.name}
+    # rabbitmq配置
+    rabbitmq:
+        host: 127.0.0.1
+        port: 5672
+        virtualHost: /
+        username: guest
+        password: guest
+    cloud:
+        bus:
+            trace:
+                enabled: true
+
+# eureka client
+eureka:
+  client:
+      serviceUrl:
+          defaultZone: http://localhost:9999/eureka/
+  instance:
+      lease-expiration-duration-in-seconds: 30  # 续约更新时间间隔（默认30秒）
+      lease-renewal-interval-in-seconds: 10  # 续约到期时间（默认90秒）
+
+# 关闭安全验证
+management:
+    security:
+        enabled: false
