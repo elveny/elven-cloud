@@ -19,6 +19,9 @@ spring:
             discovery:
                 enabled: true
                 serviceId: elven-cloud-config-server
+        bus:
+            trace:
+                enabled: true
 
 # eureka client
 eureka:

@@ -23,29 +23,8 @@ info:
     app.name: ${app.name}
     app.description: ${app.name} is a Spring Cloud config-client application
 
-# 服务器设置（端口等）
-server:
-    port: 9100 # 0:随机端口, -1表示禁止HTTP端口
-    undertow:
-        accesslog:
-            enabled: true
-
-# 日志
-logging:
-    level:
-        root: INFO #FATAL ERROR WARN INFO DEBUG TRACE
-    path: ./    # ./表示当前应用的根目录
-    file: ./logs/elven-cloud-config-client.log    # 设置日志文件
-
-
-# banner-mode
+# spring 配置
 spring:
-    main:
-        banner-mode: "off"
-    profiles:
-        active: home
-    application:
-        name: ${app.name}
     # rabbitmq配置
     rabbitmq:
         host: 127.0.0.1
@@ -53,21 +32,3 @@ spring:
         virtualHost: /
         username: guest
         password: guest
-    cloud:
-        bus:
-            trace:
-                enabled: true
-
-# eureka client
-eureka:
-  client:
-      serviceUrl:
-          defaultZone: http://localhost:9999/eureka/
-  instance:
-      lease-expiration-duration-in-seconds: 30  # 续约更新时间间隔（默认30秒）
-      lease-renewal-interval-in-seconds: 10  # 续约到期时间（默认90秒）
-
-# 关闭安全验证
-management:
-    security:
-        enabled: false
