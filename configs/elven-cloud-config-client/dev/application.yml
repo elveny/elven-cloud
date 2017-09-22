@@ -43,7 +43,7 @@ spring:
     main:
         banner-mode: "off"
     profiles:
-        active: home
+        active: dev
     application:
         name: ${app.name}
 
