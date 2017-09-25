@@ -1,0 +1,33 @@
+# bootstrap.yml
+# YML文件格式是YAML (YAML Aint Markup Language)编写的文件格式,YAML是一种直观的能够被电脑识别的的数据数据序列化格式,他并且容易被人类阅读.
+# 注意：yml的缩进，使用空格符，而不要使用tab键
+
+# spring
+spring:
+    main:
+        banner-mode: "off"
+    profiles:
+        active: home
+    application:
+        name: elven-cloud-service-feign
+    cloud:
+        config:
+            label: master
+            profile: ${spring.profiles.active}
+#            uri: http://localhost:9000/
+            name: ${spring.application.name}
+            discovery:
+                enabled: true
+                serviceId: elven-cloud-config-server
+        bus:
+            trace:
+                enabled: true
+
+# eureka client
+eureka:
+  client:
+      serviceUrl:
+          defaultZone: http://localhost:9999/eureka/
+  instance:
+      lease-expiration-duration-in-seconds: 30  # 续约更新时间间隔（默认30秒）
+      lease-renewal-interval-in-seconds: 10  # 续约到期时间（默认90秒）

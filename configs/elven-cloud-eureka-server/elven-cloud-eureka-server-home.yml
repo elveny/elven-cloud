@@ -136,12 +136,19 @@ endpoints:
         enabled: true
         sensitive: true
 
-# banner-mode
+# spring 配置
 spring:
     main:
         banner-mode: "off"
     profiles:
         active: home
+    # rabbitmq配置
+    rabbitmq:
+        host: 101.200.189.84
+        port: 5672
+        virtualHost: /test
+        username: test
+        password: test
 
 # eureka server
 eureka:
