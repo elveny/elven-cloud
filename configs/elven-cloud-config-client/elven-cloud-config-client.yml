@@ -38,7 +38,7 @@ logging:
     file: ./logs/elven-cloud-config-client.log    # 设置日志文件
 
 
-# banner-mode
+# spring
 spring:
     cloud:
         bus:

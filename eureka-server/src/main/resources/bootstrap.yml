@@ -9,7 +9,7 @@ spring:
     profiles:
         active: home
     application:
-        name: elven-cloud-config-client
+        name: elven-cloud-eureka-server
     cloud:
         config:
             label: master
