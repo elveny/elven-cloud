@@ -52,17 +52,17 @@ spring:
             server:
                 git:
                     uri: https://github.com/elveny/elven-cloud
-                    searchPaths: configs
+                    searchPaths: configs/'{application}'
         bus:
             trace:
                 enabled: true
     # rabbitmq配置
     rabbitmq:
-        host: 127.0.0.1
+        host: 101.200.189.84
         port: 5672
-        virtualHost: /
-        username: guest
-        password: guest
+        virtualHost: /test
+        username: test
+        password: test
 
 
 # eureka client
