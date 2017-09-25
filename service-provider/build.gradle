@@ -5,5 +5,7 @@ jar {
 
 dependencies {
     compile('org.springframework.cloud:spring-cloud-starter-eureka')
+    compile('org.springframework.cloud:spring-cloud-starter-config')
+    compile('org.springframework.cloud:spring-cloud-starter-bus-amqp')
 }
 
