@@ -14,7 +14,7 @@ app:
     description: ${app.name} is a Spring Cloud config-client application
 
 application:
-    message: Hello, elven, i am in elven-cloud-config-client/elven-cloud-config-client.yml
+    message: Hello, elven, i am in elven-cloud-config-client.yml.
 
 # 应用信息
 info:
@@ -40,18 +40,12 @@ logging:
 
 # banner-mode
 spring:
-    main:
-        banner-mode: "off"
-    profiles:
-        active: dev
-    application:
-        name: ${app.name}
+    cloud:
+        bus:
+            trace:
+                enabled: true
 
-# eureka client
-eureka:
-  client:
-      serviceUrl:
-          defaultZone: http://localhost:9999/eureka/
-  instance:
-      lease-expiration-duration-in-seconds: 30  # 续约更新时间间隔（默认30秒）
-      lease-renewal-interval-in-seconds: 10  # 续约到期时间（默认90秒）
+# 关闭安全验证
+management:
+    security:
+        enabled: false

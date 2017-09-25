@@ -52,7 +52,7 @@ spring:
             server:
                 git:
                     uri: https://github.com/elveny/elven-cloud
-                    searchPaths: configs/'{application}'
+                    searchPaths: configs/{application}
                     force-pull: true
         bus:
             trace:
