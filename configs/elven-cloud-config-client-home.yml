@@ -27,7 +27,7 @@ info:
 spring:
     # rabbitmq配置
     rabbitmq:
-        host: 127.0.0.1
+        host: 101.200.189.84
         port: 5672
         virtualHost: /
         username: guest
