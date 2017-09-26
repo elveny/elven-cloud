@@ -11,10 +11,10 @@ project:
 # 应用相关
 app:
     name: elven-cloud-service-provider
-    description: ${app.name} is a Spring Cloud service-provider application, I'm in configs/elven-cloud-service-provider/elven-cloud-service-provider-home.yml.
+    description: ${app.name} is a Spring Cloud service-provider application
 
 application:
-    message: Hello, elven
+    message: Hello, elven, I'm in configs/elven-cloud-service-provider/elven-cloud-service-provider-home.yml.
 
 # 应用信息
 info:
