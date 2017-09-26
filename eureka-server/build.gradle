@@ -1,6 +1,6 @@
 
 jar {
-    baseName = 'elven-cloud-eureka-server'
+    baseName = 'cloud-eureka-server'
     version = '0.0.1-SNAPSHOT'
 }
 

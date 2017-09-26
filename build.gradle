@@ -45,5 +45,26 @@ allprojects{
     }
 }
 
+subprojects{
 
+    // 清除上次的编译生成的文件
+    task clearBuiltFiles(type:Delete){
+        println "elven cloud: delete "+project.name +"'s built files"
+        delete 'build','target'
+    }
+
+    // 编译所有subProjects
+    task buildSubProjects(dependsOn: build) << {
+        println "elven cloud: building project:"+project.name
+    }
+
+    // 发布工程，依赖clearBuildedFiles和buildSubProjects
+    task release(type: Copy,dependsOn: buildSubProjects) {
+        println "elven cloud: copy "+project.name +"'s built files"
+        from('build/libs') {
+            include '*.jar'
+        }
+        into ('../target')
+    }
+}
 
