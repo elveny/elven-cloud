@@ -158,7 +158,10 @@ eureka:
   instance:
       hostname: localhost
   client:
-      registerWithEureka: false
-      fetchRegistry: false
+      registerWithEureka: true
+      fetchRegistry: true
       serviceUrl:
           defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  instance:
+        metadataMap:
+            instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
