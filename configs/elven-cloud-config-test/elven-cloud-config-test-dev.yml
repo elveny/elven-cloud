@@ -1,0 +1,34 @@
+# application.yml
+# YML文件格式是YAML (YAML Aint Markup Language)编写的文件格式,YAML是一种直观的能够被电脑识别的的数据数据序列化格式,他并且容易被人类阅读.
+# 注意：yml的缩进，使用空格符，而不要使用tab键
+
+# project相关
+project:
+    artifactId: elven-cloud-config-test
+    name: config-test
+    description: config-test.cloud.elven.tech
+
+# 应用相关
+app:
+    name: elven-cloud-config-test
+    description: ${app.name} is a Spring Cloud config-test application
+
+application:
+    message: Hello, elven, i am in elven-cloud-config-test-dev.yml. I'm added.
+
+# 应用信息
+info:
+    contact.email: elven1984@gmail.com
+    contact.phone: 18888888888
+    app.name: ${app.name}
+    app.description: ${app.name} is a Spring Cloud config-test application
+
+# spring 配置
+spring:
+    # rabbitmq配置
+    rabbitmq:
+        host: 101.200.189.84
+        port: 5672
+        virtualHost: /test
+        username: test
+        password: test

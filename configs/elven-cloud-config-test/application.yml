@@ -4,28 +4,28 @@
 
 # project相关
 project:
-    artifactId: elven-cloud-service-provider
-    name: service-provider
-    description: service-provider.cloud.elven.tech
+    artifactId: elven-cloud-config-test
+    name: config-test
+    description: config-test.cloud.elven.tech
 
 # 应用相关
 app:
-    name: elven-cloud-service-provider
-    description: ${app.name} is a Spring Cloud service-provider application
+    name: elven-cloud-config-test
+    description: ${app.name} is a Spring Cloud config-test application
 
 application:
-    message: Hello, elven
+    message: Hello, elven, i am in elven-cloud-config-test/application.yml
 
 # 应用信息
 info:
     contact.email: elven1984@gmail.com
     contact.phone: 18888888888
     app.name: ${app.name}
-    app.description: ${app.name} is a Spring Cloud service-provider application
+    app.description: ${app.name} is a Spring Cloud config-test application
 
 # 服务器设置（端口等）
 server:
-    port: 8001 # 0:随机端口, -1表示禁止HTTP端口
+    port: 9100 # 0:随机端口, -1表示禁止HTTP端口
     undertow:
         accesslog:
             enabled: true
@@ -35,14 +35,15 @@ logging:
     level:
         root: INFO #FATAL ERROR WARN INFO DEBUG TRACE
     path: ./    # ./表示当前应用的根目录
-    file: ./logs/elven-cloud-service-provider.log    # 设置日志文件
+    file: ./logs/elven-cloud-config-test.log    # 设置日志文件
+
 
 # banner-mode
 spring:
     main:
         banner-mode: "off"
     profiles:
-        active: home
+        active: dev
     application:
         name: ${app.name}
 
@@ -51,8 +52,6 @@ eureka:
   client:
       serviceUrl:
           defaultZone: http://localhost:9999/eureka/
-#      healthcheck:
-#          enabled: true # 开启健康检查
   instance:
       lease-expiration-duration-in-seconds: 30  # 续约更新时间间隔（默认30秒）
       lease-renewal-interval-in-seconds: 10  # 续约到期时间（默认90秒）
