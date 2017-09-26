@@ -29,13 +29,16 @@ public class ServiceProviderHelloController {
     @Value("${server.port}")
     private String port;
 
+    @Value("${application.message}")
+    private String message;
+
     /**
      * home
      * @return
      */
     @RequestMapping()
     public String home(){
-        return "home: port:"+port;
+        return "provider home: message => " + message;
     }
 
     @RequestMapping("hello")
