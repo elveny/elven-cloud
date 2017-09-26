@@ -25,7 +25,7 @@ info:
 
 # 服务器设置（端口等）
 server:
-    port: 9999 # 0:随机端口, -1表示禁止HTTP端口
+    port: 9000 # 0:随机端口, -1表示禁止HTTP端口
     undertow:
         accesslog:
             enabled: true
@@ -41,7 +41,7 @@ logging:
 management:
     address: 127.0.0.1
     # port:-1表示不能通过http访问管理服务
-    port: 9998
+    port: 9100
     context-path: /manage
     security:
         enabled: false

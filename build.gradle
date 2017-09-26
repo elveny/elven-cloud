@@ -59,7 +59,7 @@ subprojects{
     }
 
     // 发布工程，依赖clearBuildedFiles和buildSubProjects
-    task release(type: Copy,dependsOn: buildSubProjects) {
+    task release(type: Copy, dependsOn: buildSubProjects) {
         println "elven cloud: copy "+project.name +"'s built files"
         from('build/libs') {
             include '*.jar'
