@@ -1,5 +1,5 @@
 jar {
-    baseName = 'cloud-confit-test'
+    baseName = 'cloud-config-test'
     version = '0.0.1-SNAPSHOT'
 }
 
