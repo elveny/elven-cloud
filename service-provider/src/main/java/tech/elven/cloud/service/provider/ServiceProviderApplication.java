@@ -18,8 +18,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * <li>Version: 1.0</li>
  * <li>Content: create</li>
  */
-@EnableEurekaClient
 @SpringBootApplication
+@EnableEurekaClient
 public class ServiceProviderApplication {
 
     public static void main(String[] args) {
