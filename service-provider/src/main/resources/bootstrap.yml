@@ -7,7 +7,7 @@ spring:
     main:
         banner-mode: "off"
     profiles:
-        active: home
+        active: home, node1, node2
     application:
         name: elven-cloud-service-provider
     cloud:
