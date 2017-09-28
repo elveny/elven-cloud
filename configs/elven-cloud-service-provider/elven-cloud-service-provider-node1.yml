@@ -42,7 +42,7 @@ spring:
     main:
         banner-mode: "off"
     profiles:
-        active: home
+        active: node1
     # rabbitmq配置
     rabbitmq:
         host: 101.200.189.84
