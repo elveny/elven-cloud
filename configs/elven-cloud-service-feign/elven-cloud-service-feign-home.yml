@@ -55,7 +55,7 @@ spring:
 eureka:
   client:
       serviceUrl:
-          defaultZone: http://localhost:9000/eureka/
+          defaultZone: http://zone1:9000/eureka/, http://zone2:9001/eureka/
 #      healthcheck:
 #          enabled: true # 开启健康检查
   instance:

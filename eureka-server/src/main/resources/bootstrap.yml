@@ -11,23 +11,14 @@ spring:
     application:
         name: elven-cloud-eureka-server
     cloud:
-        config:
-            label: master
-            profile: ${spring.profiles.active}
-#            uri: http://localhost:9000/
-            name: ${spring.application.name}
-            discovery:
-                enabled: true
-                serviceId: elven-cloud-config-server
+#        config:
+#            label: master
+#            profile: ${spring.profiles.active}
+##            uri: http://localhost:9000/
+#            name: ${spring.application.name}
+#            discovery:
+#                enabled: true
+#                serviceId: elven-cloud-config-server
         bus:
             trace:
                 enabled: true
-
-# eureka client
-eureka:
-  client:
-      serviceUrl:
-          defaultZone: http://localhost:9000/eureka/
-  instance:
-      lease-expiration-duration-in-seconds: 30  # 续约更新时间间隔（默认30秒）
-      lease-renewal-interval-in-seconds: 10  # 续约到期时间（默认90秒）

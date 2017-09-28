@@ -11,7 +11,7 @@ project:
 # 应用相关
 app:
     name: elven-cloud-eureka-server
-    description: ${app.name} is a Spring Cloud Eureka application, I'm in elven-cloud-euaeka-server.yml.
+    description: ${app.name} is a Spring Cloud Eureka application
 
 application:
     message: Hello, Eureka
@@ -142,19 +142,27 @@ spring:
         banner-mode: "off"
     profiles:
         active: home
+    # rabbitmq配置
+    rabbitmq:
+        host: 101.200.189.84
+        port: 5672
+        virtualHost: /test
+        username: test
+        password: test
 
 # eureka server
 eureka:
   server:
       enable-self-preservation: true  # 设为false，关闭自我保护
       eviction-interval-timer-in-ms: 4000  # 清理间隔（单位毫秒，默认是60*1000）
-#  instance:
-#      hostname: localhost
   client:
       registerWithEureka: true
       fetchRegistry: true
       serviceUrl:
-          defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+          defaultZone: http://zone1:9000/eureka/, http://zone2:9001/eureka/
   instance:
+      hostname: localhost
       metadataMap:
           instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+      lease-expiration-duration-in-seconds: 30  # 续约更新时间间隔（默认30秒）
+      lease-renewal-interval-in-seconds: 90  # 续约到期时间（默认90秒）
