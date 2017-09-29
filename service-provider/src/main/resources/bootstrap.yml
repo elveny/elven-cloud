@@ -24,6 +24,9 @@ spring:
                 enabled: true
     zipkin:
         base-url: http://zone1:5000
+        locator:
+            discovery:
+                enabled: true
 
 # eureka client
 eureka:
