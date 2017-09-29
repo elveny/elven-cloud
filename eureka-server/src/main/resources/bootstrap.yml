@@ -11,14 +11,14 @@ spring:
     application:
         name: elven-cloud-eureka-server
     cloud:
-#        config:
-#            label: master
-#            profile: ${spring.profiles.active}
-##            uri: http://localhost:9000/
-#            name: ${spring.application.name}
-#            discovery:
-#                enabled: true
-#                serviceId: elven-cloud-config-server
+        config:
+            label: master
+            profile: ${spring.profiles.active}
+#            uri: http://localhost:9000/
+            name: ${spring.application.name}
+            discovery:
+                enabled: true
+                serviceId: elven-cloud-config-server
         bus:
             trace:
                 enabled: true
