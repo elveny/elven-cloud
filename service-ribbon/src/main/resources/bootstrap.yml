@@ -22,6 +22,8 @@ spring:
         bus:
             trace:
                 enabled: true
+    zipkin:
+        base-url: http://zone1:5000
 
 # eureka client
 eureka:

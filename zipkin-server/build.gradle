@@ -1,0 +1,9 @@
+jar {
+    baseName = 'cloud-zipkin-server'
+    version = '0.0.1-SNAPSHOT'
+}
+
+dependencies {
+    compile('io.zipkin.java:zipkin-server')
+    compile('io.zipkin.java:zipkin-autoconfigure-ui')
+}

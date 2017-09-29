@@ -7,9 +7,9 @@ spring:
     main:
         banner-mode: "off"
     profiles:
-        active: home, node1, node2
+        active: home
     application:
-        name: elven-cloud-service-provider
+        name: elven-cloud-zipkin-server
     cloud:
         config:
             label: master
@@ -22,8 +22,6 @@ spring:
         bus:
             trace:
                 enabled: true
-    zipkin:
-        base-url: http://zone1:5000
 
 # eureka client
 eureka:
@@ -32,4 +30,4 @@ eureka:
           defaultZone: http://zone1:9000/eureka/, http://zone2:9001/eureka/
   instance:
       lease-expiration-duration-in-seconds: 30  # 续约更新时间间隔（默认30秒）
-      lease-renewal-interval-in-seconds: 10  # 续约到期时间（默认90秒）
+      lease-renewal-interval-in-seconds: 90  # 续约到期时间（默认90秒）
