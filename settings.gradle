@@ -8,5 +8,4 @@ include 'config-server'
 include 'config-client'
 include 'config-test'
 include 'zipkin-server'
-include 'ttt'
 
