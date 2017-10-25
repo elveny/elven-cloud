@@ -6,7 +6,7 @@
 project:
     artifactId: elven-cloud-service-feign
     name: eureka
-    description: service-feign.cloud.elven.tech
+    description: service-feign.cloud.elven.site
 
 # 应用相关
 app:

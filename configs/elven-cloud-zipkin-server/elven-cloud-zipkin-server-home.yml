@@ -6,7 +6,7 @@
 project:
     artifactId: elven-cloud-zipkin-server
     name: zipkin-server
-    description: zipkin-server.cloud.elven.tech
+    description: zipkin-server.cloud.elven.site
 
 # 应用相关
 app:

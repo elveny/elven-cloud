@@ -14,7 +14,7 @@
         </encoder>
     </appender>
 
-    <logger name="tech.elven.springcloud" level="info">
+    <logger name="site.elven.cloud" level="info">
         <appender-ref ref="dailyRollingFileAppender"/>
     </logger>
 

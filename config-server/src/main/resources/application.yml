@@ -6,7 +6,7 @@
 project:
     artifactId: elven-cloud-config-server
     name: config-server
-    description: config-server.cloud.elven.tech
+    description: config-server.cloud.elven.site
 
 # 应用相关
 app:

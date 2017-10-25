@@ -6,7 +6,7 @@
 project:
     artifactId: elven-cloud-service-ribbon
     name: eureka
-    description: service-ribbon.cloud.elven.tech
+    description: service-ribbon.cloud.elven.site
 
 # 应用相关
 app:

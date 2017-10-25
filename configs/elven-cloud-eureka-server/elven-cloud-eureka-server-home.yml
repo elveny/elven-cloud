@@ -6,7 +6,7 @@
 project:
     artifactId: elven-cloud-eureka-server
     name: eureka-server
-    description: eureka-server.cloud.elven.tech
+    description: eureka-server.cloud.elven.site
 
 # 应用相关
 app:

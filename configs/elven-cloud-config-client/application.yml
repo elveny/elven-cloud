@@ -6,7 +6,7 @@
 project:
     artifactId: elven-cloud-config-client
     name: config-client
-    description: config-client.cloud.elven.tech
+    description: config-client.cloud.elven.site
 
 # 应用相关
 app:

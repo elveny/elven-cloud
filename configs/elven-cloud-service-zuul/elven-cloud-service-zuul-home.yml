@@ -6,7 +6,7 @@
 project:
     artifactId: elven-cloud-service-zuul
     name: eureka
-    description: service-zuul.cloud.elven.tech
+    description: service-zuul.cloud.elven.site
 
 # 应用相关
 app:
